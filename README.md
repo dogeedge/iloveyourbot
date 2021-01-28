@@ -45,6 +45,21 @@ Generate ethereum address with vanity contract address:
 $ node . -i 51a7ab0be9 --contract
 ```
 
+Hunt ethereum wallet with balance:
+```sh
+$ node . --hunt
+```
+
+Hunt 10 ethereum wallets with `51a7ab0be9` as starting characters:
+```sh
+$ node . --hunt -n 10 -i 51a7ab0be9
+```
+
+Generate without any limit:
+```sh
+$ node . -f
+```
+
 Log to file
 ```sh
 $ node . -n 10 -l
