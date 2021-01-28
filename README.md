@@ -1,78 +1,58 @@
-# Vanity Eth
+# Vanity Hunter
 
-Nodejs based tool to generate vanity ethereum addresses
+Nodejs based tool to generate and hunt vanity ethereum addresses
 
 # Features!
 
   - Generate multiple addresses
   - Supports Multi-core processors
-  - vanity contract address
-  - log to file
-  - checksum based vanity address
+  - Vanity contract address
+  - Log to file
+  - Checksum based vanity address
+  - Hunting for accounts with any balance
 
 ### Installation
 ```sh
-$ npm install -g vanity-eth
-$ vanityeth -i deadbeef
+$ git clone https://github.com/iloveyourbot/VanityHunter.git
+$ cd VanityHunter
+$ npm install
+$ node . -i 51a7ab0be9
 ```
 ### Examples
 
 Generate ethereum address:
 ```sh
-$ vanityeth
+$ node .
 ```
 
-generate 10 ethereum addresses:
+Generate 10 ethereum addresses:
 ```sh
-$ vanityeth -n 10
+$ node . -n 10
 ```
 
-generate 10 ethereum addresses with deadbeef as starting characters:
+Generate 10 ethereum addresses with `51a7ab0be9` as starting characters:
 ```sh
-$ vanityeth -n 10 -i deadbeef
-```
-generate 10 ethereum addresses with DEADBEEF as the checksum address (case sensitive):
-```sh
-$ vanityeth -n 10 -i DEADBEEF -c
-```
-generate ethereum address with vanity contract address:
-```sh
-$ vanityeth -i deadbeef --contract
-```
-log to file
-```sh
-$ vanityeth -n 10 -l
-```
-help me
-```sh
-$ vanityeth -h
-```
-### Docker usage
-
-Get the image
-```sh
-# Build image locally after cloning repository
-$ docker build -t vanityeth .
-
-# or download image
-docker pull myetherwallet/vanityeth
+$ node . -n 10 -i 51a7ab0be9
 ```
 
-Usage
-```
-$ docker run -it vanityeth
-
-# Pass additional arguments
-$ docker run -it myetherwallet/vanityeth -i deadbeef
-```
-
-### Running Locally
-To run from source:
+Generate 10 ethereum addresses with `51A7AB0BE9` as the checksum address (case sensitive):
 ```sh
-git clone git@github.com:MyEtherWallet/VanityEth.git
-cd VanityEth
-npm install
-./index.js
+$ node . -n 10 -i 51A7AB0BE9 -c
+```
+
+Generate ethereum address with vanity contract address:
+```sh
+$ node . -i 51a7ab0be9 --contract
+```
+
+Log to file
+```sh
+$ node . -n 10 -l
+```
+
+Help me
+```sh
+$ node . -h
 ```
 
 License
